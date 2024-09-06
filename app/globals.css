@@ -6,13 +6,13 @@
   --background: #ffffff;
   --foreground: #171717;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/**/
+/*@media (prefers-color-scheme: dark) {*/
+/*  :root {*/
+/*    --background: #0a0a0a;*/
+/*    --foreground: #ededed;*/
+/*  }*/
+/*}*/
 
 body {
   color: var(--foreground);
@@ -29,6 +29,10 @@ body {
     "Open Sans",
     "Helvetica Neue",
     sans-serif;
+}
+
+ol {
+  font-family: inherit;
 }
 
 @layer components {
