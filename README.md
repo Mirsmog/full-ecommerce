@@ -6,7 +6,8 @@ Full Ecommerce is a modern online clothing store with a comprehensive set of fea
 - Admin Dashboard: Manage products, orders, and users.
 - Analytics: Sales statistics and reporting.
 - User Account: Manage orders, profile settings, and preferences.
-  An ideal solution for launching and managing an online clothing store!
+
+An ideal solution for launching and managing an online clothing store!
 
 <table>
   
