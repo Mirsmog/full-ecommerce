@@ -1,5 +1,4 @@
-![Preview](https://i.ibb.co/6wvhFyj/Figma-Cover-1.jpg)
-
+![Preview](https://github.com/user-attachments/assets/3723a83f-1cb0-449a-938b-82b29e9fcd7a)
 # Full Ecommerce
 
 Full Ecommerce is a modern online clothing store with a comprehensive set of features for managing products and users. The project includes:
