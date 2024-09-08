@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { toast, Toaster } from "sonner";
+import { toast } from "sonner";
 
 export default function Home() {
   return (
