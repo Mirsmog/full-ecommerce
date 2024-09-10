@@ -1,21 +1,41 @@
-import { cn } from "@/lib/utils";
-import { Check } from "lucide-react";
+"use client";
 import React from "react";
+import { Check } from "lucide-react";
+import { cn } from "@/lib/utils";
 
-interface ICheckbox extends React.InputHTMLAttributes<HTMLInputElement> {}
+interface ICheckbox extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  checked?: boolean;
+}
 
-const Checkbox: React.FC<ICheckbox> = ({ className }) => {
+const Checkbox: React.FC<ICheckbox> = ({
+  checked = false,
+  className,
+  ...props
+}) => {
+  const [isChecked, setIsChecked] = React.useState(checked);
+  const handleChecked = () => {
+    setIsChecked((prev) => !prev);
+  };
   return (
-    // TODO: Refactor logic to use a vanilla checkbox without a label. Create a separate component for the label exaple: Chadcn.
-    <label className="cursor-pointer bg-transparent outline outline-2 -outline-offset-2 outline-neutral-black-100 checkbox-label w-[18px] h-[18px] relative rounded-[3px]">
-      <input type="checkbox" className={cn("sr-only peer", className)} />
-      <Check
-        className="absolute top-[3px] left-[3px] transition-transform scale-0 peer-checked:scale-100"
-        color="white"
-        size={12}
-        strokeWidth={3}
-      />
-    </label>
+    <button
+      type="button"
+      role="checkbox"
+      onClick={handleChecked}
+      aria-checked={isChecked}
+      data-state={isChecked ? "checked" : "unchecked"}
+      className={cn(
+        "text-neutral-white outline outline-2 outline-neutral-white-100 -outline-offset-2 rounded-[3px] min-w-[18px] min-h-[18px] max-w-[18px] max-h-[18px] flex items-center justify-center focus-visible:outline-primary/80",
+        isChecked && "bg-neutral-black-600 outline-transparent",
+        className,
+      )}
+      {...props}
+    >
+      <span
+        className={cn("transition-transform scale-0", isChecked && "scale-100")}
+      >
+        <Check size={12} strokeWidth={3} />
+      </span>
+    </button>
   );
 };
 
