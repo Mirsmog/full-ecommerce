@@ -6,6 +6,7 @@ interface ICheckbox extends React.InputHTMLAttributes<HTMLInputElement> {}
 
 const Checkbox: React.FC<ICheckbox> = ({ className }) => {
   return (
+    // TODO: Refactor logic to use a vanilla checkbox without a label. Create a separate component for the label exaple: Chadcn.
     <label className="cursor-pointer bg-transparent outline outline-2 -outline-offset-2 outline-neutral-black-100 checkbox-label w-[18px] h-[18px] relative rounded-[3px]">
       <input type="checkbox" className={cn("sr-only peer", className)} />
       <Check
