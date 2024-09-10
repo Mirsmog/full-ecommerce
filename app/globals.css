@@ -85,4 +85,8 @@ ol {
     font-size: 0.75rem;
     line-height: 1.5rem;
   }
+
+  .checkbox-label:has(input:checked) {
+    @apply bg-neutral-black-600 outline-none;
+  }
 }

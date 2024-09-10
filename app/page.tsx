@@ -1,5 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
+import Checkbox from "@/components/ui/checkbox";
 import { toast } from "sonner";
 
 export default function Home() {
@@ -33,6 +34,8 @@ export default function Home() {
       >
         Button Label
       </Button>
+      <Checkbox />
+      <Checkbox />
     </div>
   );
 }
